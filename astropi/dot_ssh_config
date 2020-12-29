@@ -1,0 +1,9 @@
+Host remote-vnc
+    HostName astropi.marcelloromani.name
+    RemoteForward 10000 localhost:5900
+    IdentityFile ~/.ssh/aws_personal_milan.pem
+    User ec2-user
+    # we expect the host checking to fail as the EC2 instance
+    # will be terminated and recreated periodically to save money
+    StrictHostKeyChecking no
+
