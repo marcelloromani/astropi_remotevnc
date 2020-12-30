@@ -48,3 +48,4 @@ aws route53 change-resource-record-sets --hosted-zone-id $ZONE_ID --change-batch
 sed -i 's/#GatewayPorts/GatewayPorts/'       /etc/ssh/sshd_config
 sed -i 's/GatewayPorts no/GatewayPorts yes/' /etc/ssh/sshd_config
 
+systemctl restart sshd
